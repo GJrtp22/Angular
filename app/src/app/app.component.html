@@ -1,0 +1,35 @@
+<div>
+  <h4>Data Bindings Example</h4>
+  First Name : {{fname}} <br/> 
+  Last Name : {{lname}} <br/>
+  Age : {{age}} <br/>
+  Gender : {{gender}} <br/>
+  Country : {{country}} <br/>
+  Is Employed : {{isEmployed}} <br/>
+  <hr/>
+
+  First Name : <input type="text" [(ngModel)]="fname"/><br/>
+  Last Name : <input type="text" [(ngModel)]="lname"/><br/>
+  Age : <input type="text" [(ngModel)]="age"/><br/>
+  Gender : 
+      <input type="radio" [(ngModel)]="gender" value="Male">Male
+      <input type="radio" [(ngModel)]="gender" value="Fe-Male">Fe-Male <br/>
+
+  Country : 
+      <select [(ngModel)]="country">
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+      </select> <br/>
+
+   Is Employed : <input type="checkbox" [(ngModel)]="isEmployed"> <br/>
+  
+  <input type="button" value="Submit" (click)="handleSubmitBtn()" />
+
+</div>
+
+<app-greet></app-greet>
+<app-welcome></app-welcome>
+
+
+<router-outlet></router-outlet>
